@@ -4,5 +4,10 @@
     </head>
     <body>
         <h1>This is a homepage</h1>
+        <form action="imageupload/imageprocess" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input id="image" type="file" name="image" />
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>
